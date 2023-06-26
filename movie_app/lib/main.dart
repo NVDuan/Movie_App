@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/src/config/themes/app_colors.dart';
+import 'src/modules/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +17,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           fontFamily: 'montserrat',
-         Color.fromARGB(255, 16, 12, 12),
+          scaffoldBackgroundColor: AppColors.darkerBackground,
           textTheme: Theme.of(context).textTheme.apply(  
-            bodyColor: Brightness.light,
+            bodyColor: AppColors.white,
+            displayColor: AppColors.white
           ),
         ),
-          
+      home: const HomePage(),
     );
   }
 }
+
